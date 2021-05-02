@@ -4,6 +4,14 @@ repositories {
         url = uri("https://maven.enginehub.org/repo/")
     }
 
+    maven {
+        url = uri("https://ci.ender.zone/plugin/repository/everything/")
+    }
+
+    maven {
+        url = uri("https://repo.phoenix616.dev/")
+    }
+
 }
 
 dependencies {
@@ -17,6 +25,12 @@ dependencies {
 
     // integrations
     compileOnly("com.sk89q.worldguard:worldguard-bukkit:7.0.4")
-    compileOnly(files("../libs/Factions.jar"))
+    implementation("com.massivecraft:Factions:1.6.9.5-U0.5.20")
+
+    implementation("org.kitteh:paste-gg-api") {
+        version {
+            strictly("0.9.0")
+        }
+    }
 
 }

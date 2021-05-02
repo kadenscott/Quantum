@@ -1,0 +1,10 @@
+---
+kind: pipeline
+type: docker
+name: build
+
+steps:
+  - name: backend
+    image: gradle:jdk11
+    commands:
+      - gradle build
